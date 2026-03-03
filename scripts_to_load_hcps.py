@@ -103,10 +103,16 @@ for i, row in hcps.iterrows():
                 "Error Message": res["error"]["msg"]
                 }
             print(f"Err: {err}")
-            error_creating_hcp = np.append(error_creating_hcp, err)
+            error_creating_hcp = np.append(error_creating_hcp, err)\
+        
 
 
 print(f"\nError: {error_creating_hcp}")
+
+#Writing the errors to the output file. 
+error_f = pd.DataFrame(error_creating_hcp) 
+error_f.to_csv("output/error_creating_hcps.csv")
+
 #logout
 print("\n" + "-"*50)
 logout_user = logout(endpoint, {"_req":"logout"}, {"applicationid":connID})
