@@ -79,20 +79,23 @@ print("\nDataset info:")
 for i, row in hcps.iterrows():
     params = {
         "_req": "v.ah",
-        "code": int(row["Code"]),
+        "code": row["Code"],
         "alias": row["Alias"],
         "name": row["Name"],
         "email": row["Email"],
         "phone": int(row["Phone"]),
         "city": int(row["City"])
     }
-
+    print(f"Params: {params}")
     new_hcp = post_request(endpoint,params, {"applicationid":connID})
 
     if new_hcp.status_code == 200:
         res = new_hcp.json()
         print(f"Added HCP: {params}")
         print(f"Server response: {res}")
+        print("^"*50)
+        print(res)
+        print("^"*50)
         if res["error"]:
             err = {
                 "Code": params["code"], 
@@ -103,15 +106,30 @@ for i, row in hcps.iterrows():
                 "Error Message": res["error"]["msg"]
                 }
             print(f"Err: {err}")
-            error_creating_hcp = np.append(error_creating_hcp, err)\
+            error_creating_hcp = np.append(error_creating_hcp, err)
+        else:
+            value = {
+                "Code": params["code"], 
+                "Name": params["name"], 
+                "Email": params["email"], 
+                "Phone": params["phone"],
+                "Wheel": res["result"]["value"]["wheel"],
+                "Pass": res["result"]["value"]["pass"]
+            }
+            succeed_creating_hcp = np.append(succeed_creating_hcp,value)
         
 
 
 print(f"\nError: {error_creating_hcp}")
 
 #Writing the errors to the output file. 
-error_f = pd.DataFrame(error_creating_hcp) 
-error_f.to_csv("output/error_creating_hcps.csv")
+if error_creating_hcp.size > 0:
+    error_f = pd.DataFrame(error_creating_hcp) 
+    error_f.to_csv("output/error_creating_hcps.csv")
+
+if succeed_creating_hcp.size > 0:
+    val_f = pd.DataFrame(succeed_creating_hcp)
+    val_f.to_csv("output/created_hcps_logins.csv")
 
 #logout
 print("\n" + "-"*50)
