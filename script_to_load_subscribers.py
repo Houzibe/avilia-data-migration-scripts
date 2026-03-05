@@ -12,5 +12,64 @@ print("="*50)
 
 #Load config file
 config_f = pd.read_json("config.json")
-print(config_f["config"].to_string)
-print(config_f["config"]["magik"])
+
+endpoint = "https://api.testing.lemunz.io/"
+login_user = None
+connID = None
+error_creating_subscriber = []
+succeed_creating_subscriber = []
+
+#API CALL
+#Function to post api request
+def post_request(url, params, header = None):
+    return req.post(url, params, headers = header)
+
+#Function to logout
+def logout(url, params, header):
+    return req.post(url, params, headers = header)
+
+#Login to connect to the database
+print("Login to connect to the database.")
+username = input("Enter username: ")
+password = input("Enter password: ")
+
+print("\nConnecting to the database...")
+login = post_request(
+    endpoint,
+    params = {
+        "_req":"login",
+        "org" : config_f["payer"]["org"],
+        "mid" : config_f["payer"]["mid"],
+        "midtype" : config_f["payer"]["midtype"],
+        "magik" : config_f["payer"]["magik"],
+        "user" : username,
+        "pass" : password
+    }
+)
+
+if login.status_code == 200:
+    response = login.json()
+    login_user = response["result"]["value"]
+    connID = login_user[0][0]["APPID"]
+    print("Login successfully...")
+else:
+    print("Login failed. Error has occured! Try again later.")
+
+if login_user:
+    print("\nLoging User")
+    print("-"*50)
+    print(f"User:  {login_user[0][0]["SURNAME"]} {login_user[0][0]["OTHERNAMES"]}")
+    print(f"Last Login: {login_user[0][0]["LASTLOGIN"]}")
+    print("-"*50)
+
+
+
+#logout
+print("\n" + "-"*50)
+logout_user = post_request(endpoint, {"_req":"logout"}, {"applicationid":connID})
+if logout_user.status_code == 200:
+    print("User logout successfull...")
+    print(logout_user.json())
+
+print("\n")
+

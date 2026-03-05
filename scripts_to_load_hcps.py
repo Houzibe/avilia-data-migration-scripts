@@ -42,10 +42,10 @@ login = post_request(
     endpoint,
     params={
         "_req" : "login",
-        "org" : config["config"]["org"],
-        "mid" : config["config"]["mid"],
-        "midtype" : config["config"]["midtype"],
-        "magik" : config["config"]["magik"],
+        "org" : config["vendor"]["org"],
+        "mid" : config["vendor"]["mid"],
+        "midtype" : config["vendor"]["midtype"],
+        "magik" : config["vendor"]["magik"],
         "user" : username,
         "pass" : password
     }
