@@ -16,8 +16,8 @@ config_f = pd.read_json("config.json")
 endpoint = "https://api.testing.lemunz.io/"
 login_user = None
 connID = None
-error_creating_subscriber = []
-succeed_creating_subscriber = []
+error_creating_subscriber = np.array([])
+succeed_creating_subscriber = np.array([])
 
 #API CALL
 #Function to post api request
@@ -62,7 +62,62 @@ if login_user:
     print(f"Last Login: {login_user[0][0]["LASTLOGIN"]}")
     print("-"*50)
 
+#load dataset
+subcribers_f = pd.read_csv("datasets/avilia_subscribers_dataset.csv")
+print("\n Subscribers dataset is loaded...")
 
+for i, row in subcribers_f.iterrows():
+    params = {
+        "_req": "c.asub",
+        "code": row["Code"],
+        "alias": row["Alias"],
+        "name": row["Name"],
+        "email": row["Email"],
+        "phone": row["Phone"],
+        "city": row["City"],
+        "exdate": row["Expiry_Date"]
+    }
+    print(params)
+    new_subscribers = post_request(endpoint, params, {"applicationid":connID})
+
+    if new_subscribers.status_code == 200:
+        res = new_subscribers.json()
+        print(f"Adding subscriber: {params}")
+        print(f"Server response: {res}")
+
+        if res["error"]:
+            err = {
+                "Code": params["code"],
+                "Name": params["name"],
+                "Email": params["email"],
+                "Phone": params["phone"],
+                "Serverity": res["error"]["severity"], 
+                "Error Message": res["error"]["msg"] 
+            }
+            print(f"Error: {err}")
+            error_creating_subscriber = np.append(error_creating_subscriber, err)
+        else:
+            value = {
+                "Code": params["code"], 
+                "Name": params["name"], 
+                "Email": params["email"], 
+                "Phone": params["phone"],
+                "Wheel": res["result"]["value"]["wheel"],
+                "Pass": res["result"]["value"]["pass"]
+            }
+            succeed_creating_subscriber = np.append(succeed_creating_subscriber, value)
+
+print(f"Error: {error_creating_subscriber}")
+
+#Write error to a file.
+if error_creating_subscriber.size > 0:
+    error_f = pd.DataFrame(error_creating_subscriber)
+    error_f.to_csv("output/error_creating_subscribers.csv")
+
+#Write return subscribers logins to a file
+if succeed_creating_subscriber.size > 0:
+    val_f = pd.DataFrame(succeed_creating_subscriber)
+    val_f.to_csv("output/created_subscribers_logins.csv")
 
 #logout
 print("\n" + "-"*50)

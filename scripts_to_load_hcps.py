@@ -70,7 +70,7 @@ print()
 print("Loading dataset...")
 
 #Load dataset
-hcps = pd.read_csv("datasets/avilia_hcps_datasets.csv")
+hcps = pd.read_csv("datasets/avilia_hcps_dataset.csv")
 print("Dataset loaded successfully...")
 
 print("\nDataset info:")
