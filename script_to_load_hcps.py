@@ -79,12 +79,12 @@ print("\nDataset info:")
 for i, row in hcps.iterrows():
     params = {
         "_req": "v.ah",
-        "code": row["Code"],
-        "alias": row["Alias"],
-        "name": row["Name"],
-        "email": row["Email"],
-        "phone": int(row["Phone"]),
-        "city": int(row["City"])
+        "code": row["code"],
+        "alias": row["alias"],
+        "name": row["name"],
+        "email": row["email"],
+        "phone": int(row["phone"]),
+        "city": int(row["city"])
     }
     print(f"Params: {params}")
     new_hcp = post_request(endpoint,params, {"applicationid":connID})
@@ -98,23 +98,23 @@ for i, row in hcps.iterrows():
         print("^"*50)
         if res["error"]:
             err = {
-                "Code": params["code"], 
-                "Name": params["name"], 
-                "Email": params["email"], 
-                "Phone": params["phone"],
-                "Serverity": res["error"]["severity"], 
-                "Error Message": res["error"]["msg"]
+                "code": params["code"], 
+                "name": params["name"], 
+                "email": params["email"], 
+                "phone": params["phone"],
+                "serverity": res["error"]["severity"], 
+                "error Message": res["error"]["msg"]
                 }
             print(f"Err: {err}")
             error_creating_hcp = np.append(error_creating_hcp, err)
         else:
             value = {
-                "Code": params["code"], 
-                "Name": params["name"], 
-                "Email": params["email"], 
-                "Phone": params["phone"],
-                "Wheel": res["result"]["value"]["wheel"],
-                "Pass": res["result"]["value"]["pass"]
+                "code": params["code"], 
+                "name": params["name"], 
+                "email": params["email"], 
+                "phone": params["phone"],
+                "wheel": res["result"]["value"]["wheel"],
+                "pass": res["result"]["value"]["pass"]
             }
             succeed_creating_hcp = np.append(succeed_creating_hcp,value)
         
