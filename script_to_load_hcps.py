@@ -4,6 +4,7 @@
 import numpy as np
 import pandas as pd
 import requests as req
+from array_datasets import hcps as hcp_dataset
 
 print("\n") 
 print("=" * 50)
@@ -70,13 +71,26 @@ print()
 print("Loading dataset...")
 
 #Load dataset
-hcps = pd.read_csv("datasets/avilia_hcps_dataset.csv")
+#hcps = pd.read_csv("datasets/avilia_hcps_dataset.csv")
+hcps = hcp_dataset.hcps_data
 print("Dataset loaded successfully...")
 
 print("\nDataset info:")
 #print(f"Size: {hcps.shape()}")
 
-for i, row in hcps.iterrows():
+#for i, row in hcps.iterrows():
+for row in hcps:
+    if row["code"] == "" or row["alias"] == "" or row["name"] == "" or row["email"] == "" or row["phone"] == "" or row["city"] == "":
+        print(f"Skipping row with missing values: {row}")
+        error_creating_hcp = np.append(error_creating_hcp, {
+                "code": row["code"], 
+                "name": row["name"], 
+                "email": row["email"], 
+                "phone": row["phone"],
+                "serverity": "High", 
+                "error Message": "Missing required fields"
+                })
+        continue
     params = {
         "_req": "v.ah",
         "code": row["code"],
