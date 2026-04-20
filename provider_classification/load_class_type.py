@@ -4,7 +4,7 @@
 import numpy as np
 import pandas as pd
 import requests as req
-from array_datasets.affiliate_hcps import affiliate_hcps_data
+from data.class_types_data import class_types
 
 print("\n")
 print("="*50)
@@ -12,14 +12,14 @@ print("         SCRIPT TO AFFILIATE WITH PROVIDER")
 print("="*50)
 
 #Load config file
-config_f = pd.read_json("config.json")
+config_f = pd.read_json("../config.json")
 
 endpoint = "https://api.testing.lemunz.io/"
 login_user = None
 connID = None
-error_affiliating_sp = np.array([])
-succeed_affiliating_sp = np.array([])
-hcps_to_affiliate = affiliate_hcps_data
+error_creating_class_types = np.array([])
+succeed_creating_class_types = np.array([])
+class_type_data = class_types
 
 #API CALL
 #Function to post api request
@@ -66,15 +66,16 @@ if login_user:
 
 #load dataset
 #sps_f = pd.read_csv("datasets/avilia_providers_dataset.csv")
-print("\n Providers dataset is loaded...")
+print("\n class types is loaded...")
 
 
 #for i, row in sps_f.iterrows():
-for row in hcps_to_affiliate:
+for row in class_type_data:
    params = {
-        "_req": "n.aaffsp",
-        "spcode": int(row["spcode"]),
-        "active": int(row["active"])
+        "_req": "n.aspclt",
+        "name": row["name"],
+        "descr": row["descr"],
+        "allow_multiple": row["allow_multiple"]
         }
              
    print(params)
@@ -83,35 +84,36 @@ for row in hcps_to_affiliate:
    
    if new_sp.status_code == 200:
         res = new_sp.json()
-        print(f"Affiliating to a provider: {params}")
+        print(f"Class types params: {params}")
         print(f"Server response: {res}")
 
         if res["error"]:
             err = {
-                "spcode": int(params["spcode"]),
-                "serverity": res["error"]["severity"], 
+                "name": params["name"],
+                "severity": res["error"]["severity"], 
                 "error_message": res["error"]["msg"] 
             }
             print(f"Error: {err}")
-            error_affiliating_sp = np.append(error_affiliating_sp, err)
+            error_creating_class_types = np.append(error_creating_class_types, err)
         else:
             value = {
-                "spcode": params["spcode"],
-                "affilid": res["result"]["value"]["affilid"]
+                "name": params["name"],
+                "descr": params["descr"],
+                "id": res["result"]["value"]["id"]   
             }
-            succeed_affiliating_sp = np.append(succeed_affiliating_sp, value)
+            succeed_creating_class_types = np.append(succeed_creating_class_types, value)
 
-print(f"Error: {error_affiliating_sp}")
+print(f"Error: {error_creating_class_types}")
 
 #Write error to a file.
-if error_affiliating_sp.size > 0:
-    error_f = pd.DataFrame(error_affiliating_sp)
-    error_f.to_csv("output/error_affiliating_sp.csv")
+if error_creating_class_types.size > 0:
+    error_f = pd.DataFrame(error_creating_class_types)
+    error_f.to_csv("output/error_creating_class_types.csv")
 
-#Write return created enrollees to a file
-if succeed_affiliating_sp.size > 0:
-    val_f = pd.DataFrame(succeed_affiliating_sp)
-    val_f.to_csv("output/created_affiliating_sp.csv")
+#Write return created class types to a file
+if succeed_creating_class_types.size > 0:
+    val_f = pd.DataFrame(succeed_creating_class_types)
+    val_f.to_csv("output/created_class_types.csv")
 
 #logout
 print("\n" + "-"*50)

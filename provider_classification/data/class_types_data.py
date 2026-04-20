@@ -2,7 +2,7 @@ import numpy as np
 
 class_types = np.array([
     {
-        "name": "Available service",
+        "name": "Available services",
         "descr": "Types of services that are rendered by the provider.",
         "allow_multiple": 1
     },
