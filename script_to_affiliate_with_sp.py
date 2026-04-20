@@ -4,6 +4,7 @@
 import numpy as np
 import pandas as pd
 import requests as req
+from array_datasets.affiliate_hcps import affiliate_hcps_data
 
 print("\n")
 print("="*50)
@@ -18,6 +19,7 @@ login_user = None
 connID = None
 error_affiliating_sp = np.array([])
 succeed_affiliating_sp = np.array([])
+hcps_to_affiliate = affiliate_hcps_data
 
 #API CALL
 #Function to post api request
@@ -63,11 +65,12 @@ if login_user:
     print("-"*50)
 
 #load dataset
-sps_f = pd.read_csv("datasets/avilia_providers_dataset.csv")
+#sps_f = pd.read_csv("datasets/avilia_providers_dataset.csv")
 print("\n Providers dataset is loaded...")
 
 
-for i, row in sps_f.iterrows():
+#for i, row in sps_f.iterrows():
+for row in hcps_to_affiliate:
    params = {
         "_req": "n.aaffsp",
         "spcode": int(row["spcode"]),
@@ -94,7 +97,7 @@ for i, row in sps_f.iterrows():
         else:
             value = {
                 "spcode": params["spcode"],
-                "affilid": res["result"]["value"]["affilid"],
+                "affilid": res["result"]["value"]["affilid"]
             }
             succeed_affiliating_sp = np.append(succeed_affiliating_sp, value)
 
