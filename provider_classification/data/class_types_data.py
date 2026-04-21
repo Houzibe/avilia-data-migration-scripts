@@ -8,7 +8,7 @@ class_types = np.array([
     },
     {
         "name": "Providers by band",
-        "descr": "Classification of providers by their band(A+,A,B,C).",
+        "descr": "Classification of providers by their band(A+, A, B, C).",
         "allow_multiple": 1
     }
 ])
