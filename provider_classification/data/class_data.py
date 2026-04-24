@@ -37,6 +37,13 @@ classes = np.array([
         "typeid": 102,
     },
     {
+        "name": "Eye Clinics",
+        "descr": "Providers that are eye clinics",
+        "avatar": "",
+        "status_id": "act",
+        "typeid": 102,
+    },
+    {
         "name": "Opticals",
         "descr": "Providers that do optical services",
         "avatar": "",
