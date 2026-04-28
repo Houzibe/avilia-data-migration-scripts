@@ -20,30 +20,18 @@ connID = None
 error_classifying_sps = np.array([])
 succeed_classifying_sps = np.array([])
 classify_sps = np.array([])
-classify_sps = np.append(classify_sps, hospital_classes)
-classify_sps = np.append(classify_sps, imaging_centers_classes)
-classify_sps = np.append(classify_sps, pharmacy_classes)
-classify_sps = np.append(classify_sps, laboratory_classes)
-classify_sps = np.append(classify_sps, dental_classes)
-classify_sps = np.append(classify_sps, eye_clinic_classes)
-classify_sps = np.append(classify_sps, physiotherapy_classes)
+#classify_sps = np.append(classify_sps, hospital_classes)
+#lassify_sps = np.append(classify_sps, imaging_centers_classes)
+#cl#assify_sps = np.append(classify_sps, pharmacy_classes)
+#classify_sps = np.append(classify_sps, laboratory_classes)
+#classify_sps = np.append(classify_sps, dental_classes)
+#classify_sps = np.append(classify_sps, eye_clinic_classes)
+#classify_sps = np.append(classify_sps, physiotherapy_classes)
 classify_sps = np.append(classify_sps, band_A_Plus_providers)
 classify_sps = np.append(classify_sps, band_A_providers)
 classify_sps = np.append(classify_sps, band_B_providers)
-classify_sps = np.append(classify_sps, band_C_providers)
+#classify_sps = np.append(classify_sps, band_C_providers)
 
-#Load dataset from classify_providers_data.py
-#hospital_classes_data = hospital_classes
-#imaging_centers_classes_data = imaging_centers_classes
-#pharmacy_classes_data = pharmacy_classes
-#laboratory_classes_data = laboratory_classes
-#dental_classes_data = dental_classes
-#eye_clinic_classes_data = eye_clinic_classes
-#physiotherapy_classes_data = physiotherapy_classes
-#band_A_Plus_providers_data = band_A_Plus_providers
-#band_A_providers_data = band_A_providers
-#band_B_providers_data = band_B_providers
-#band_C_providers_data = band_C_providers
 
 #API CALL
 #Function to post api request
