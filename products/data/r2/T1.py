@@ -1,0 +1,140 @@
+import numpy as np
+
+diagnostic_imaging = np.array([
+    {"name": "Transcretal Scan", "descr": "", "catid": 27, "source": 83},
+    {"name": "Transvaginal Scan (Tvs)", "descr": "", "catid": 27, "source": 83},
+])
+
+family_planning = np.array([
+    {"name": "Tubal Ligation(Single/Both)", "descr": "", "catid": 44, "source": 83},
+    {"name": "Tubal Surgery", "descr": "", "catid": 44, "source": 83},
+])
+
+laboratory_tests = np.array([
+    {"name": "Tb IgG", "descr": "", "catid": 39, "source": 83},
+    {"name": "Testosterone", "descr": "", "catid": 39, "source": 83},
+    {"name": "Tetesterone", "descr": "", "catid": 39, "source": 83},
+    {"name": "Thin Film Report", "descr": "", "catid": 39, "source": 83},
+    {"name": "Throat", "descr": "", "catid": 39, "source": 83},
+    {"name": "Throat Swab", "descr": "", "catid": 39, "source": 83},
+    {"name": "Thyroglobulin Antibodies", "descr": "", "catid": 39, "source": 83},
+    {"name": "Thyroid Function Tests", "descr": "", "catid": 39, "source": 83},
+    {"name": "Thyroid Peroxidase", "descr": "", "catid": 39, "source": 83},
+    {"name": "Thyroid Stimulating Hormone", "descr": "", "catid": 39, "source": 83},
+    {"name": "Torch Screen", "descr": "", "catid": 39, "source": 83},
+    {"name": "Total Calcium", "descr": "", "catid": 39, "source": 83},
+    {"name": "Total Carbondioxide(Tco2)", "descr": "", "catid": 39, "source": 83},
+    {"name": "Total Iron-Binding Capacity", "descr": "", "catid": 39, "source": 83},
+    {"name": "Total Platelet Count", "descr": "", "catid": 39, "source": 83},
+    {"name": "Total Serum Iron", "descr": "", "catid": 39, "source": 83},
+    {"name": "Toxoplasmosis", "descr": "", "catid": 39, "source": 83},
+    {"name": "Transcutaneous Serum Bilrubin", "descr": "", "catid": 39, "source": 83},
+    {"name": "Transferrin", "descr": "", "catid": 39, "source": 83},
+    {"name": "Transfusion Screening", "descr": "", "catid": 39, "source": 83},
+    {"name": "Treponema Pallidum Hemagglutination Assay", "descr": "", "catid": 39, "source": 83},
+    {"name": "Triglycerides", "descr": "", "catid": 39, "source": 83},
+    {"name": "Tuberculosis Screening", "descr": "", "catid": 39, "source": 83},
+    {"name": "Two-Point Glucose Profile", "descr": "", "catid": 39, "source": 83},
+])
+
+medical_supplies = np.array([
+    {"name": "Transparent Firm Dressing (Tegaderm) Item 1 Unit", "descr": "", "catid": 34, "source": 83},
+])
+
+medications = np.array([
+    {"name": "Tadalafil (...) Tablet 10 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Tadalafil (Stalong) Tablet 10 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Tamsulosin Hydrochloride (Contiflo Xl) Tablet 0.4 μg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Telmisartan 40Mg (...) Tablet 40 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Telmisartan 40Mg (Micardis) Tablet 40 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Telmisartan 40Mg + Amlodipine 10Mg (Twynsta) Tablet 40 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Telmisartan 40Mg + Amlodipine 5Mg (Pilorem 40/5) Tablet 40 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Telmisartan 40Mg + Hydrochlorothiazide 12.5Mg (Safetelmi H) Tablet 1 Unit", "descr": "", "catid": 35, "source": 83},
+    {"name": "Telmisartan 80Mg (...) Tablet 80 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Telmisartan 80Mg (Arbitel - 40) Tablet 40 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Telmisartan 80Mg (Arbitel-80) Tablet 80 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Telmisartan/Hydrochlorothiazide (Micardis Plus/Co-Micardis) Tablet 80 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Telmisartan/Hydrochlorothiazide (Pilorem 80/5) Tablet 80 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Telmisartan/Hydrochlorothiazide/Amlodipine (Pilorem 80/10/25) Tablet 80 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Tenofovir (...) Tablet 300 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Tenofovir 300Mg+ Lamivudine 300Mg+ Efavirenz 600Mg (...) Tablet 1 Unit", "descr": "", "catid": 35, "source": 83},
+    {"name": "Terbinafine (...) Tablet 250 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Terbinafine (Lamisil) Tablet 250 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Terbinafine (Tabasil 250Mg) Tablet 250 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Terbinafine (Tabasil Cream) Cream 1 %", "descr": "", "catid": 35, "source": 83},
+    {"name": "Terbinafine Hydrochloride 1% (Lamisil) Cream 15 G", "descr": "", "catid": 35, "source": 83},
+    {"name": "Terbinafine Hydrochloride 1% (Tydisil) Cream 20 G", "descr": "", "catid": 35, "source": 83},
+    {"name": "Termisartan/Hydrochorothiazide (Arbitel 80 H) Tablet 80 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Testosterone Enanthate (Rotex) Injection 250 mg/ml", "descr": "", "catid": 35, "source": 83},
+    {"name": "Tetanus Antitoxins (...) Injection 1500 IU", "descr": "", "catid": 35, "source": 83},
+    {"name": "Tetanus+Diptheria (Td (M/Dose)) Injection 0.5 ml", "descr": "", "catid": 35, "source": 83},
+    {"name": "Tetracycline (...) Capsule 250 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Tetracycline (...) Ointment 1 Unit", "descr": "", "catid": 35, "source": 83},
+    {"name": "Tetrahydrozoline Hcl + Potassium Cl (Visine) Drops 0.1 %", "descr": "", "catid": 35, "source": 83},
+    {"name": "Thermomether (Omron) Item 1 Unit", "descr": "", "catid": 35, "source": 83},
+    {"name": "Thyme Liquid Extract + Primula Root Liquid Extract (Bronchicum Elixir S) Syrup 1 Unit", "descr": "", "catid": 35, "source": 83},
+    {"name": "Thyme Liquid Extract + Primula Root Liquid Extract (Rhinaphyto) Syrup 5 ml", "descr": "", "catid": 35, "source": 83},
+    {"name": "Timolol Maleate (Timoeye) Drops 0.5 %", "descr": "", "catid": 35, "source": 83},
+    {"name": "Tinidazole (Batina) Infusion 400 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Tinidazole (Batina) Injection 800 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Tinidazole (Batina) Suspension 500 mg/5Ml", "descr": "", "catid": 35, "source": 83},
+    {"name": "Tinidazole (Tinizole) Tablet 500 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Tioconazole (Gyno-Tiocosid) Pessary 100 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Tioconazole (Tiocosid) Cream 1 %", "descr": "", "catid": 35, "source": 83},
+    {"name": "Tizanidine (Ceedalud) Tablet 4 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Tizanidine (Dexilant) Tablet 2 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Tizanidine (Relezin) Tablet 2 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Tizanidine (Sirdalud) Tablet 2 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Tizanidine (Sirdalud) Tablet 4 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Tolterodine Tartrate (Roliten) Tablet 2 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Topiramate (...) Tablet 25 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Torsemide (Torsinex) Injection 10 mg/ml", "descr": "", "catid": 35, "source": 83},
+    {"name": "Torsemide (Torsinex) Tablet 10 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Tramadol (Pengesic) Capsule 50 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Tramadol (Trabilin) Capsule 50 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Tramadol (Trabilin) Injection 100 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Tranexamic Acid (Trexamin) Capsule 500 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Tranexamic Acid (Trexamin) Injection 500 mg/5Ml", "descr": "", "catid": 35, "source": 83},
+    {"name": "Travoprost (Travatan) Drops 40 μg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Tretinoin 0.05% (Acnetin-A) Cream 10 G", "descr": "", "catid": 35, "source": 83},
+    {"name": "Tretinoin 0.05% (Retin A) Cream 30 G", "descr": "", "catid": 35, "source": 83},
+    {"name": "Treviamet (Treviamet) Tablet 1000 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Triamcinolone Acetonide (Kenalog Orabase) Ointment 15 G", "descr": "", "catid": 35, "source": 83},
+    {"name": "Triamcinolone Acetonide (Kenalog) Injection 40 mg/ml", "descr": "", "catid": 35, "source": 83},
+    {"name": "Triamcinolone Acetonide (Triamcinolone) Ointment 20 G", "descr": "", "catid": 35, "source": 83},
+    {"name": "Trihexylphenidyl Hcl (Artane) Tablet 5 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Trimethoprim 4Omg + Sulphamethazole 200Mg (Primpex) Suspension 240 mg/5Ml", "descr": "", "catid": 35, "source": 83},
+    {"name": "Trimethoprim 80Mg + Sulfamethoxazole 400Mg (Cotrimoxazole) Suspension 240 mg/5Ml", "descr": "", "catid": 35, "source": 83},
+    {"name": "Trimethoprim 80Mg + Sulfamethoxazole 400Mg (Emtrim) Syrup 240 mg/5Ml", "descr": "", "catid": 35, "source": 83},
+    {"name": "Trimethoprim 80Mg + Sulfamethoxazole 400Mg (Loxaprim) Syrup 240 mg/5Ml", "descr": "", "catid": 35, "source": 83},
+    {"name": "Trimethoprim 80Mg + Sulfamethoxazole 400Mg (Loxaprim) Tablet 480 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Trimethoprim 80Mg + Sulfamethoxazole 400Mg (Primpex) Tablet 480 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Trimethoprim 80Mg + Sulfamethoxazole 400Mg (Primpex) Tablet 960 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Trimethoprim 80Mg + Sulfamethoxazole 400Mg +Bromhexine Hcl (Bronquidiazina) Syrup 7.5 ml", "descr": "", "catid": 35, "source": 83},
+    {"name": "Triprolidine+Pseudoephedrine (Actifed) Tablet 62.5 mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Triprolidine+Pseudoephedrine (Sinufed) Syrup 30 mg/5Ml", "descr": "", "catid": 35, "source": 83},
+    {"name": "Triprolidine+Pseudoephedrine (Sinufed) Tablet 62.5 mg", "descr": "", "catid": 35, "source": 83},
+])
+
+surgeries = np.array([
+    {"name": "Tempoporomandibular Jaw Manipulation", "descr": "", "catid": 37, "source": 83},
+    {"name": "Thyoglossal Cyst", "descr": "", "catid": 37, "source": 83},
+    {"name": "Thyroidectomy", "descr": "", "catid": 37, "source": 83},
+    {"name": "Thyroidectomy (ENT)", "descr": "", "catid": 37, "source": 83},
+    {"name": "Tongue Tie Release (OPD)", "descr": "", "catid": 37, "source": 83},
+    {"name": "Tongue Tie Removal Under Anaesthesia", "descr": "", "catid": 37, "source": 83},
+    {"name": "Tonsillectomy In Adults", "descr": "", "catid": 37, "source": 83},
+    {"name": "Total Laryngectomy", "descr": "", "catid": 37, "source": 83},
+    {"name": "Tracheostomy (Excluding Tube)", "descr": "", "catid": 37, "source": 83},
+    {"name": "Tymp", "descr": "", "catid": 37, "source": 83},
+    {"name": "Tympanometry", "descr": "", "catid": 37, "source": 83},
+    {"name": "Tympanoplasty", "descr": "", "catid": 37, "source": 83},
+])
+
+# =============================================================================
+# SHEET SUMMARY — T
+# =============================================================================
+# Total records on this sheet : 113
+# Categories found            : diagnostic_imaging, family_planning, laboratory_tests, medical_supplies, medications, surgeries
+# Unmapped categories         : None
+# =============================================================================

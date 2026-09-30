@@ -1,0 +1,177 @@
+import numpy as np
+
+consultations = np.array([
+    {"name": "Follow-Up Consultation", "descr": "", "catid": 36, "source": 83},
+])
+
+diagnostic_imaging = np.array([
+    {"name": "Femur (Thigh)", "descr": "", "catid": 27, "source": 83},
+    {"name": "Femur Or Thigh X-Ray", "descr": "", "catid": 27, "source": 83},
+    {"name": "Finger - Ap & Lat", "descr": "", "catid": 27, "source": 83},
+    {"name": "Fistulogram", "descr": "", "catid": 27, "source": 83},
+    {"name": "Fistulography", "descr": "", "catid": 27, "source": 83},
+    {"name": "Foot - Ap & Oblique", "descr": "", "catid": 27, "source": 83},
+    {"name": "Foot/Toe", "descr": "", "catid": 27, "source": 83},
+    {"name": "Foot/Toe X-Ray", "descr": "", "catid": 27, "source": 83},
+    {"name": "Forearm X-Ray", "descr": "", "catid": 27, "source": 83},
+    {"name": "Forearm(Radius & Ulna) - Ap & Lat", "descr": "", "catid": 27, "source": 83},
+    {"name": "Fundoscopy", "descr": "", "catid": 27, "source": 83},
+    {"name": "Fundus Photograph/Eye", "descr": "", "catid": 27, "source": 83},
+])
+
+infusions = np.array([
+    {"name": "Full Strength Darrows", "descr": "", "catid": 47, "source": 83},
+])
+
+laboratory_tests = np.array([
+    {"name": "Fasting Blood Sugar", "descr": "", "catid": 39, "source": 83},
+    {"name": "FBC", "descr": "", "catid": 39, "source": 83},
+    {"name": "Fine Needle Aspiration", "descr": "", "catid": 39, "source": 83},
+    {"name": "Follicle Stimulating Hormone ( FSH)", "descr": "", "catid": 39, "source": 83},
+    {"name": "Free Testosterone", "descr": "", "catid": 39, "source": 83},
+    {"name": "Free Thyroxide (T4)", "descr": "", "catid": 39, "source": 83},
+    {"name": "Free Tri-Iodothyronine (T3)", "descr": "", "catid": 39, "source": 83},
+    {"name": "Fsh", "descr": "", "catid": 39, "source": 83},
+    {"name": "FSH – Follicle Stimulating Hormone", "descr": "", "catid": 39, "source": 83},
+    {"name": "FSH-LH- Testosterone", "descr": "", "catid": 39, "source": 83},
+    {"name": "FSH-LH-Prolactin", "descr": "", "catid": 39, "source": 83},
+    {"name": "FSH-LH-Prolactin-Testosterone", "descr": "", "catid": 39, "source": 83},
+    {"name": "FSH-LH-Prolactin-TSH", "descr": "", "catid": 39, "source": 83},
+    {"name": "Full Blood Count (A-I) *Bundle*", "descr": "", "catid": 39, "source": 83},
+    {"name": "Full Electrolytes-(A-D) *Bundle*", "descr": "", "catid": 39, "source": 83},
+])
+
+medical_devices = np.array([
+    {"name": "Frame", "descr": "", "catid": 29, "source": 83},
+    {"name": "Fused Bifocal", "descr": "", "catid": 29, "source": 83},
+    {"name": "Fused Bifocal Blue Cut", "descr": "", "catid": 29, "source": 83},
+    {"name": "Fused Bifocal Photo/ARC", "descr": "", "catid": 29, "source": 83},
+    {"name": "Fused Bifocal White", "descr": "", "catid": 29, "source": 83},
+    {"name": "Fused Bifocal White Special Order", "descr": "", "catid": 29, "source": 83},
+])
+
+medications = np.array([
+    {"name": "Falcidin", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fansidar", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fansidar 525Mg Tab", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fansidar Inj 525Mg/Amp", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fansidar Syrup", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fansidar Syrup Branded", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fansidar Tabs Branded", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fasigyn 500Mg Tab", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fefol Capsules", "descr": "", "catid": 35, "source": 83},
+    {"name": "Feldene", "descr": "", "catid": 35, "source": 83},
+    {"name": "Feldene (Piroxicam)", "descr": "", "catid": 35, "source": 83},
+    {"name": "Feldene Gel", "descr": "", "catid": 35, "source": 83},
+    {"name": "Feldene Inj 20Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Felvin Caps", "descr": "", "catid": 35, "source": 83},
+    {"name": "Felxicam 20Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Feroglobin Blood Tonic-200Ml", "descr": "", "catid": 35, "source": 83},
+    {"name": "Ferosoft I.V", "descr": "", "catid": 35, "source": 83},
+    {"name": "Ferrobin Plus Tab", "descr": "", "catid": 35, "source": 83},
+    {"name": "Ferrous Sulphate", "descr": "", "catid": 35, "source": 83},
+    {"name": "Ferrous Sulphate 200Mg Tab", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fersolate", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fertilaid For Women", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fexet (Fexofenadine)", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fexet 120Mg Tab", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fexet 180 Mg Tab", "descr": "", "catid": 35, "source": 83},
+    {"name": "Finasteride 5Mg Tab", "descr": "", "catid": 35, "source": 83},
+    {"name": "Flagentyl 500Mg Tab", "descr": "", "catid": 35, "source": 83},
+    {"name": "Flagyl Mnz", "descr": "", "catid": 35, "source": 83},
+    {"name": "Flagyl Mnz 200Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Flagyl Mnz 400Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Flagyl Syrup", "descr": "", "catid": 35, "source": 83},
+    {"name": "Flagyl Syrup (Branded)", "descr": "", "catid": 35, "source": 83},
+    {"name": "Flagyl Tablets (400Mg) Branded", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fliocinonide Cream 35G", "descr": "", "catid": 35, "source": 83},
+    {"name": "Flixonase Inhaler", "descr": "", "catid": 35, "source": 83},
+    {"name": "Flixonase Nasal Spray", "descr": "", "catid": 35, "source": 83},
+    {"name": "Flixotide Accuhaler 100Mcg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Flixotide Accuhaler 50Mcg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Floranorm", "descr": "", "catid": 35, "source": 83},
+    {"name": "Flotac 75Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Flotac Tabs(Diclofenac 75Mg/Cholestyramine)", "descr": "", "catid": 35, "source": 83},
+    {"name": "Floxacillin", "descr": "", "catid": 35, "source": 83},
+    {"name": "Floxapen 250Mg Cap", "descr": "", "catid": 35, "source": 83},
+    {"name": "Flu-J", "descr": "", "catid": 35, "source": 83},
+    {"name": "Flucamed Cap 200Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Flucamed Cap 50Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Flucamed Eye Drop", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fluconazole", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fluconazole (Other Brands) 150Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fluconazole (Other Brands) 50Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Flucor Day Tabs", "descr": "", "catid": 35, "source": 83},
+    {"name": "Flucoxacilin", "descr": "", "catid": 35, "source": 83},
+    {"name": "Flucunazole Caps 150Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fludrocortisone", "descr": "", "catid": 35, "source": 83},
+    {"name": "Flunitrazepam", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fluocinonide Cream 35G", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fluoxetine 20Mg Caps", "descr": "", "catid": 35, "source": 83},
+    {"name": "Folic Acid", "descr": "", "catid": 35, "source": 83},
+    {"name": "Folic Acid 5Mg Tab", "descr": "", "catid": 35, "source": 83},
+    {"name": "Folic Acid Syrup", "descr": "", "catid": 35, "source": 83},
+    {"name": "Folleys Catether", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fortum 1 Gm", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fortum 1G Inj", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fortwin Inj 30Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fragmin 5,000 I.U", "descr": "", "catid": 35, "source": 83},
+    {"name": "Framycetin", "descr": "", "catid": 35, "source": 83},
+    {"name": "Franol", "descr": "", "catid": 35, "source": 83},
+    {"name": "Franol Tab", "descr": "", "catid": 35, "source": 83},
+    {"name": "Frusemide 20Mg Inj", "descr": "", "catid": 35, "source": 83},
+    {"name": "Frusemide 40Mg Tab", "descr": "", "catid": 35, "source": 83},
+    {"name": "FSH 75 I.U Bravelle/ Branded Inj", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fulcin Griseofulvin", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fulcin Syrup", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fulcin Tab", "descr": "", "catid": 35, "source": 83},
+    {"name": "Funbact A Cream", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fungusol Lotion 50Mls", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fungusol Powder 20G", "descr": "", "catid": 35, "source": 83},
+    {"name": "Furosemide", "descr": "", "catid": 35, "source": 83},
+])
+
+others = np.array([
+    {"name": "Free-Field Audiometry", "descr": "", "catid": 48, "source": 83},
+])
+
+surgeries = np.array([
+    {"name": "Facial Decompression", "descr": "", "catid": 37, "source": 83},
+    {"name": "Facial/Bell'S Palsy", "descr": "", "catid": 37, "source": 83},
+    {"name": "Feeding /Day", "descr": "", "catid": 37, "source": 83},
+    {"name": "Fenestration", "descr": "", "catid": 37, "source": 83},
+    {"name": "Fibroadenoma - Bilateral", "descr": "", "catid": 37, "source": 83},
+    {"name": "Fibrodenoma - Unilateral", "descr": "", "catid": 37, "source": 83},
+    {"name": "Fibroma - Excision", "descr": "", "catid": 37, "source": 83},
+    {"name": "Fine Needle Aspiration Cytology", "descr": "", "catid": 37, "source": 83},
+    {"name": "Fissurectomy", "descr": "", "catid": 37, "source": 83},
+    {"name": "Fissurectomy And Haemorrhoidectomy", "descr": "", "catid": 37, "source": 83},
+    {"name": "Fissurectomy With Eversion Of Sac -", "descr": "", "catid": 37, "source": 83},
+    {"name": "Fistula In - Ano Repair", "descr": "", "catid": 37, "source": 83},
+    {"name": "Fistula Repair", "descr": "", "catid": 37, "source": 83},
+    {"name": "Fistula – In –Ano", "descr": "", "catid": 37, "source": 83},
+    {"name": "Fistulectomy", "descr": "", "catid": 37, "source": 83},
+    {"name": "Foot", "descr": "", "catid": 37, "source": 83},
+    {"name": "Forcep Delivery", "descr": "", "catid": 37, "source": 83},
+    {"name": "Fore- Arm", "descr": "", "catid": 37, "source": 83},
+    {"name": "Foreign Body Removal", "descr": "", "catid": 37, "source": 83},
+    {"name": "Foreign Body Removal (Superficial/Conjunctival)", "descr": "", "catid": 37, "source": 83},
+    {"name": "Foreign Body Removal In Deep Region", "descr": "", "catid": 37, "source": 83},
+    {"name": "Fracture Reduction Of The Nose", "descr": "", "catid": 37, "source": 83},
+    {"name": "Fractures Per Visit", "descr": "", "catid": 37, "source": 83},
+    {"name": "Fractures/Dislocations/Subluxation", "descr": "", "catid": 37, "source": 83},
+    {"name": "Frontoethmoidectomy", "descr": "", "catid": 37, "source": 83},
+    {"name": "Fulguration", "descr": "", "catid": 37, "source": 83},
+    {"name": "Full Denture", "descr": "", "catid": 37, "source": 83},
+    {"name": "Functional Endoscopic Sinus Surgery", "descr": "", "catid": 37, "source": 83},
+    {"name": "Fundoplication", "descr": "", "catid": 37, "source": 83},
+])
+
+# =============================================================================
+# SHEET SUMMARY — Product F
+# =============================================================================
+# Total records on this sheet : 143
+# Categories found            : consultations, diagnostic_imaging, infusions, laboratory_tests, medical_devices, medications, others, surgeries
+# Unmapped categories         : None
+# Duplicates removed          : medications:"Falcidin"; medications:"Fansidar"; medications:"Flagyl Mnz"; medications:"Fluconazole"; medications:"Fluconazole"; medications:"Folic Acid"; medications:"Folic Acid"; medications:"Furosemide"
+# =============================================================================

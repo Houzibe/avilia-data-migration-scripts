@@ -1,14 +1,40 @@
 import numpy as np
 
-product_categories = np.array([
-    
- ])   
 """
-# Load product parent & sub categories data(Medications, Medical Supplies, Nutritionals, Reproductive Health, etc.)
+      Load product parent & sub categories data(Medications, Medical Supplies, Nutritionals, Reproductive Health, etc.)
+"""
+product_categories = np.array([
+  {"name": "Consultations", "descr": "Professional medical evaluation and advice provided by a physician or specialist, including history taking, physical examination, diagnosis, treatment planning, and follow-up care.", "parent": ""},
+  {"name": "Surgeries", "descr": "Invasive or minimally invasive operative procedures performed by a surgeon to diagnose, treat, or correct a disease, injury, deformity, or functional impairment.", "parent": ""},
+  {"name": "Laboratory tests", "descr": "Analysis of biological specimens (blood, urine, stool, sputum, cerebrospinal fluid, swabs, tissues) to aid in diagnosis, monitoring, and management of disease.", "parent": ""},
+  {"name": "Physiotherapy",	"descr": "Assessment and treatment of movement disorders, musculoskeletal injuries, neurological conditions, and cardiopulmonary diseases using physical methods such as therapeutic exercises, manual therapy, electrotherapy, heat/cold therapy, and gait training.", "parent": ""},
+  {"name": "Dialysis",	"descr": "Renal replacement therapy for patients with end-stage kidney disease or acute kidney injury.", "parent": ""}, 
+  {"name": "Cancer care", "descr": "Comprehensive management of malignant diseases, including prevention, screening, diagnosis, treatment, and palliative care. Encompasses oncology consultations, diagnostic and radiological investigations, surgical oncology, chemotherapy (cytotoxic, targeted, immunotherapy, hormonal), radiotherapy, and supportive care (pain management, nutritional support, psychological counselling).", "parent": ""},
+  {"name": "Mental health services", "descr": "Medical and psychological care for mental, emotional, and behavioural disorders.", "parent": ""}, 
+  {"name": "Family Planning", "descr": "Contraceptive products and fertility treatments: oral pills, implants, IUDs, injectables, ovulation stimulants, barrier methods. Can be a sub-category under Drugs or a separate high-level category if services are included.", "parent": ""},
+  {"name": "Cosmetics / Personal Care", "descr": "Non-medical products for hygiene or beautification: lotions, shampoos, soaps, makeup, etc. (Often separate from health insurance).", "parent": ""},
+  {"name": "Vaccines", 	"descr": "Biological preparations that provide active acquired immunity against specific infectious diseases. Often grouped under Biologics but can stand alone for clarity.", "parent": ""},
+  {"name": "Infusions", "descr":	"Sterile solutions administered intravenously, including crystalloids (saline, dextrose, Ringer's), colloids, parenteral nutrition, and IV drug solutions (e.g., mannitol, amino acids).", "parent": ""},
+  {"name": "Others", "descr":	"Items that do not fit any above category: household goods (mosquito net as non-treated), food oils, unknown herbal mixtures, after-demise compensation, administrative fees, etc.", "parent": ""}
+
+])
+    
+"""
+   {"name":"Healthcare Services", "descr":"A medical procedure involving the administration of blood or blood products to a patient to replace lost components, treat anaemia, coagulopathies, or other haematological conditions.", "parent": ""},
+   {"name":"Diagnostic Imaging", "descr":"A range of non-invasive or minimally invasive techniques used to create visual representations of the interior of the body for clinical diagnosis, treatment planning, and monitoring of disease.", "parent": ""},
+   {"name":"Pathology", "descr":"The medical specialty that examines body tissues, organs, fluids, and cells to diagnose disease, determine cause of death, guide treatment, and monitor response to therapy.", "parent": ""},
+   {"name": "Medical Device", "descr": "An instrument, apparatus, implant, machine, or software intended for diagnosis, treatment, monitoring, or prevention of disease or injury.", "parent": ""},
+   {"name": "Preventive Health", "descr": "A broad domain of healthcare focused on reducing the risk of disease, injury, or disability before they occur.", "parent": ""},
+   {"name": "Biologics", "descr": "Complex, large-molecule products derived from living organisms (human, animal, microbial, or via biotechnology).", "parent": ""},
    {"name": "Reproductive Health", "descr": "Products used to control fertility, prevent pregnancy, or assist conception.", "parent": ""},
-   {"name": "Nutritionals", "descr": "Products that provide essential nutrients for normal body function, growth, or metabolic support, but are not intended to treat or prevent disease as drugs.", "parent": ""}
+   {"name": "Nutritionals", "descr": "Products that provide essential nutrients for normal body function, growth, or metabolic support, but are not intended to treat or prevent disease as drugs.", "parent": ""},
    {"name": "Medical Supplies", "descr": "Non-drug, non-equipment items used in healthcare for diagnosis, treatment, prevention, or patient care. Includes disposable and limited-use products.", "parent": ""},
    {"name":"Medications", "descr":"Pharmaceutical drugs:any substance used to treat, cure, prevent, or diagnose disease.", "parent":""},
+
+])
+"""
+
+""" 
    {"name": "Anaesthetics", "descr": "Drugs that cause temporary loss of sensation or consciousness to prevent pain during surgery or procedures.", "parent": 181},
    {"name": "Analgesics", "descr": "Medications that relieve pain without causing loss of consciousness (e.g., paracetamol, NSAIDs, opioids).", "parent": 181},
    {"name": "Antacids", "descr": "Substances that neutralize stomach acid, providing rapid relief from heartburn, indigestion, and gastroesophageal reflux.", "parent": 181},
@@ -54,6 +80,83 @@ product_categories = np.array([
    {"name": "Statins", "descr": "Lipid-lowering drugs that inhibit HMG-CoA reductase, reducing cholesterol production; used to prevent cardiovascular events (e.g., atorvastatin).", "parent": 181},
    {"name": "Steroids", "descr": "Usually refers to corticosteroids: anti-inflammatory drugs that suppress the immune system (asthma, arthritis, allergies). Anabolic steroids are different.", "parent": 181},
    {"name": "Urinary Health", "descr": "Drugs and supplements for urinary tract conditions: anticholinergics for overactive bladder, urinary analgesics, antibiotics for UTIs, prostate medications.", "parent": 181},
-   {"name": "Vaccines", "descr": "Biological preparations that provide active acquired immunity to specific infectious diseases (e.g., measles, influenza, COVID-19, HPV).", "parent": 181},
-   {"name": "Vitamins", "descr": "Organic micronutrients essential for normal metabolism; classified as dietary supplements (not drugs) unless formulated as drugs to treat deficiency diseases.", "parent": 181}
+   {"name": "Vaccines", "descr": "Biological preparations that provide active acquired immunity to specific infectious diseases (e.g., measles, influenza, COVID-19, HPV).", "parent": 236},
+   {"name": "Vitamins", "descr": "Organic micronutrients essential for normal metabolism; classified as dietary supplements (not drugs) unless formulated as drugs to treat deficiency diseases.", "parent": 181},
+   {"name": "Vector control", "descr": "Products and interventions used to limit or eliminate disease-transmitting organisms (e.g., mosquitoes, ticks, flies).", "parent": 235},
+   {"name": "Vasopressors", "descr": "Drugs that constrict blood vessels (vasoconstriction) and increase blood pressure.", "parent":181},
+   {"name": "Minerals", "descr": "Inorganic micronutrients essential for normal body function.", "parent": 231},
+   {"name": "Otologicals", "descr": "Drug products applied to the ear for local treatment of conditions such as earwax impaction (cerumenolytics), infection (antibiotic/antifungal ear drops), inflammation (steroid ear drops), or pain.", "parent":181},
+   {"name": "Cardiac glycosides", "descr": "Drugs that increase the force of heart contraction (positive inotropy) and slow heart rate (negative chronotropy).", "parent":181},
+   {"name": "Erectile Dysfunction", "descr": "Drugs used to treat erectile dysfunction (ED) by increasing blood flow to the penis.", "parent":181},
+   {"name": "Diagnostic Devices", "descr": "Instruments and equipment used to identify or monitor medical conditions.", "parent": 234},
+   {"name": "Diagnostic Product", "descr": "Often used interchangeably with Diagnostic Devices, but may also include consumable diagnostic items such as test strips, lancets, specimen containers, and reagent kits that are used with diagnostic instruments.", "parent": 234},
+   {"name": "Orthopedic & Rehabilitation Devices", "descr": "Products that support, correct, align, or protect the musculoskeletal system, or aid recovery from injury/surgery.", "parent": 234},
+   {"name": "Mobility Aids", "descr": "Devices that assist patients with movement and ambulation, particularly those with physical disabilities or post-surgical limitations.", "parent": 234},
+   {"name": "Surgical Instruments", "descr": "Hand-held tools or powered devices used during surgical procedures to cut, dissect, grasp, retract, clamp, or suture tissues.", "parent": 234},
+   {"name": "Ophthalmic - Artificial tears", "descr": "Sterile solutions, gels, or ointments that lubricate the eye surface to relieve dryness, irritation, or foreign-body sensation.", "parent": 234},
+   {"name": "Sutures & Closure Devices", "descr": "Materials and devices used to approximate and secure wound edges or surgical incisions.", "parent": 229},
+   {"name": "Ostomy Care", "descr": "Products used by patients with an ostomy (surgical opening) to collect waste from the bowel or urinary tract.", "parent": 229},
+   {"name": "Wound Care", "descr": "Materials used to cover, protect, absorb exudate, and promote healing of wounds, burns, or surgical incisions.", "parent": 229},
+   { "name": "Injection & Infusion Supplies", "descr": "Disposable items used for parenteral administration of fluids or drugs, including syringes, needles, IV giving sets, cannulae, infusion bags, and administration lines.", "parent": 229 },
+   { "name": "Cleaning & Antiseptic Supplies", "descr": "Disposable items and solutions (alcohol wipes, chlorhexidine, iodine, hydrogen peroxide) used for skin disinfection, wound cleaning, or instrument sterilization.", "parent": 229 },
+   { "name": "Personal Protective Equipment (PPE)", "descr": "Disposable or reusable gear worn to protect healthcare workers and patients from infection or injury.", "parent": 229 },
+   {"name": "Examination & Procedure Supplies", "descr": "Disposable or single-use items used during physical examinations, minor procedures, or sample collection.", "parent": 229},
+   {"name": "Packaging & Dispensing", "descr": "Materials and containers used to store, protect, or dispense pharmaceutical products or small medical items.", "parent": 229},
+   {"name": "Oral & Enteral Feeding Supplies", "descr": "Products for delivering nutrition directly into the gastrointestinal tract when oral intake is insufficient or impossible.", "parent": 229},
+   {"name": "Catheters & Drainage Supplies", "descr": "Flexible tubes and collection devices for draining fluids from body cavities or delivering fluids into organs.", "parent": 229},
+   {"name": "Lubricants & Gels", "descr": "Water-based, silicone-based, or gel formulations used to reduce friction during insertion of medical devices (e.g., catheters, specula) or for diagnostic procedures (e.g., ultrasound gel).", "parent": 229},
+   {"name": "Respiratory Supplies", "descr": "Disposable or limited-use items used to deliver oxygen, aerosolised medication, or suction.", "parent": 229},
+   {"name": "Anticholinergic", "descr": "Drugs that block the action of acetylcholine, a neurotransmitter involved in various physiological processes.", "parent": 181},
+   {"name": "Oral ulcer treatment", "descr": "Treatments for sores or lesions in the mouth.", "parent": 181},
+   {"name": "Antimigraine", "descr": "Drugs used to treat or prevent migraines.", "parent": 181},
+   {"name": "Antipsychotic", "descr": "Drugs used to treat psychotic disorders such as schizophrenia.", "parent": 181},
+   {"name": "Anti-inflammatory", "descr": "Drugs that reduce inflammation and pain.", "parent": 181},
+   {"name": "Venotonic", "descr": "Drugs that improve venous tone and circulation.", "parent": 181},
+   {"name": "Nootropic", "descr": "Drugs that enhance cognitive function, particularly memory, attention, and executive functions.", "parent": 181},
+   {"name": "Antidiarrheal", "descr": "Drugs used to treat or prevent diarrhea.", "parent": 181},
+   {"name": "Anxiolytic", "descr": "Drugs used to reduce anxiety and promote calmness.", "parent": 181},
+   {"name": "Diuretic", "descr": "Drugs that increase urine production and help eliminate excess fluid from the body.", "parent": 181},
+   {"name": "Antiemetic", "descr": "Drugs used to prevent or treat nausea and vomiting.", "parent": 181},
+   {"name": "Urinary alkalinizer", "descr": "Drugs that increase the pH of urine, often used to treat certain types of kidney stones.", "parent": 181},
+   {"name": "Hemostatic", "descr": "Drugs that promote blood clotting or stop bleeding.", "parent": 181},
+   {"name": "Bisphosphonate", "descr": "Drugs used to treat bone diseases by inhibiting bone resorption.", "parent": 181},
+   {"name": "Antiarrhythmic", "descr": "Drugs used to treat or prevent irregular heart rhythms.", "parent": 181},
+   {"name": "Immunosuppressant", "descr": "Drugs that suppress the immune system, often used to prevent organ rejection after transplantation.", "parent": 181},
+   {"name": "Expectorant", "descr": "Drugs that help loosen and expel mucus from the respiratory tract.", "parent": 181},
+   {"name": "Laxative", "descr": "Drugs that stimulate bowel movements or soften stools.", "parent": 181},
+   {"name": "Antineoplastic", "descr": "Drugs used to treat cancer by killing or slowing the growth of cancer cells.", "parent": 181},
+   {"name": "Cholinesterase inhibitor", "descr": "Drugs that inhibit the enzyme cholinesterase, leading to increased levels of acetylcholine.", "parent": 181},
+   {"name": "Cardiovascular Agents", "descr": "Drugs that affect the heart and blood vessels, used to treat conditions such as hypertension, angina, and heart failure.", "parent": 181},
+   {"name": "Hypnotic", "descr": "Drugs that induce sleep or promote relaxation.", "parent": 181},
+   {"name": "Immunoglobulin", "descr": "A preparation of antibodies used to provide passive immunity, treat immune deficiencies, or modulate autoimmune disorders.", "parent": 236},
+   {"name": "Blood Products", "descr": "Components derived from human blood or plasma derivatives.", "parent": 236},
+   {"name": "Joint supplement", "descr": "Products containing ingredients such as glucosamine, chondroitin, collagen, or omega-3 fatty acids, intended to support joint health and reduce symptoms of osteoarthritis.", "parent": 231},
+   {"name": "Supplement", "descr": "A broad term for products that supplement the diet with vitamins, minerals, amino acids, fatty acids, or herbal extracts.", "parent": 231},
+   {"name": "Herbal supplement", "descr": "Products derived from plants (e.g., ginseng, echinacea, milk thistle) used for health maintenance or symptom relief, often as traditional or folk remedies.", "parent": 231},
+   {"name": "Iron supplement", "descr": "Preparations containing ferrous salts (e.g., ferrous sulphate) or iron complexes used to prevent or treat iron deficiency anaemia.", "parent": 231},
+   {"name": "Amino Acid Supplement", "descr": "Products containing individual or blended amino acids to support protein synthesis, muscle repair, or specific metabolic conditions.", "parent": 231},
+   {"name": "Heart supplement", "descr": "Nutritional products marketed to support cardiovascular health.", "parent": 231},
+   {"name": "Medical food", "descr": "Formulated products intended for dietary management of specific diseases or conditions under medical supervision.", "parent": 231},
+   {"name": "Fertility Supplement", "descr": "Supplements containing vitamins, minerals, antioxidants used to support reproductive health and fertility in men or women.", "parent": 231},
+   {"name": "Multivitamins", "descr": "Products containing a combination of multiple vitamins to supplement dietary gaps and prevent deficiency-related conditions.", "parent": 231},
+   {"name": "Omega-3 supplement", "descr": "Dietary supplements containing eicosapentaenoic acid (EPA) and or docosahexaenoic acid (DHA) from fish oil or algae, used for cardiovascular, brain, and joint health.", "parent": 231},
+   {"name":"Transfusion service", "descr":"A medical procedure involving the administration of blood or blood products to a patient to replace lost components.", "parent":264},
+   {"name": "Ultrasound", "descr": "A non-invasive imaging technique using high-frequency sound waves to produce real-time images of organs, soft tissues, and blood flow.", "parent": 265},
+   {"name": "CT Scan", "descr": "An X-ray procedure that rotates around the body to create detailed cross-sectional images (slices) of bones, blood vessels, and soft tissues.", "parent": 265},
+   {"name": "MRI", "descr": "Uses a strong magnetic field and radio waves to generate highly detailed images of organs and soft tissues.", "parent": 265},
+   {"name": "Mammography", "descr": "A low-dose X-ray examination of the breast used to screen for and detect early signs of breast cancer, such as microcalcifications or masses.", "parent": 265},
+   {"name": "Transvaginal Ultrasound", "descr": "An ultrasound procedure in which a small transducer is inserted into the vagina to obtain high-resolution images of the uterus, ovaries, fallopian tubes, and early pregnancy.", "parent": 265},
+   {"name": "X-ray", "descr": "A quick, painless test that produces images of structures inside the body (e.g., bones, chest, abdomen) using ionising radiation. Used for fractures, infections, and foreign body detection.", "parent": 265},
+   {"name": "Dental X-ray", "descr": "X-ray examination focused on the teeth, jawbone, and surrounding oral structures. Used to detect cavities, impacted teeth, bone loss, and abscesses.", "parent": 265},
+   {"name": "Obstetric Ultrasound", "descr": "An ultrasound examination performed during pregnancy to monitor fetal development, gestational age, placental position, amniotic fluid volume, and detect congenital anomalies.", "parent": 265},
+   {"name": "Fluoroscopy", "descr": "A continuous X-ray technique that shows moving images of internal organs on a monitor, often with contrast media.", "parent": 265},
+   {"name": "Histopathology", "descr": "The microscopic examination of tissue specimens (biopsies, surgical resections) to diagnose diseases such as cancer, inflammation, and infections.", "parent": 266},
+   {"name": "Cytology", "descr": "The study of individual cells from body fluids (urine, ascites), scrapings (cervical smear), or fine-needle aspirations to detect malignancy, infections, or inflammatory conditions.", "parent": 266},
+   {"name": "Autopsy", "descr": "A medical examination of a deceased body to determine the cause and manner of death, identify disease or injury, and provide information for legal or research purposes.", "parent": 266}
+    {"name": "Muscle relaxant", "descr": "Drugs that reduce skeletal muscle tone, spasticity, or involuntary muscle contractions.", "parent": 181},
+   {"name": "Carbohydrates", "descr": "A macronutrient (sugars, starches, fibre) providing energy. In medical use, may refer to oral rehydration solutions or IV dextrose.", "parent": 231},
+   {"name": "Consumables", "descr": "A medical supplies used in healthcare: syringes, gloves, gauze, bandages, catheters, etc.", "parent": 229},
+   {"name": "Family Planning", "descr": "Products (drugs or devices) used to prevent pregnancy or regulate fertility: oral contraceptives, implants, IUDs, emergency contraception, ovulation stimulants.", "parent": 232},
+
+])
 """

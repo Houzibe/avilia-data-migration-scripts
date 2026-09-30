@@ -1,0 +1,85 @@
+import numpy as np
+
+diagnostic_imaging = np.array([
+    {"name": "X-Ray Abdomen/Supine Only", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Abdominal/Supine & Erect", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Ankle/Both", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Ankle/Single", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Barium Enema & Follow Through", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Barium Meal + Enema", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Barium Swallow", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Both Knees/Ap/Lat/4 Wb Views", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Cervical Spine/Ap/Lat/2 Views", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Chest Ap Paediatrics", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Chest Covid Baseline", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Chest Lat Fb/Tumour", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Chest PA ? Infection/Tb", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Chest PA Routine", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Clavicle/Ap/Obl/2 Views", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Coccyx Spine/Ap/Obl/2 Views", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Elbow Joint Both Ap/Obl/4 Views", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Elbow Joint Single Ap/Obl/2 Views", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Femur/Both Ap/Lat/3 Views", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Femur/Both Ap/Lat/6 Views/Trauma", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Femur/Single Ap/Lat/2 Views", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Foot/Toe/Both Ap/Lat/4 Views/Trauma", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Foot/Toe/Single Ap/Lat/6 Views", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Forearm/Ulna/Radius Single/PA/Obl/2 Views", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Forehead/Ulna/Radius/Both/PA/Obl/4 Views", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Hand/Wrist/Fingers/Both/PA/Obl/4 Views", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Hand/Wrist/Fingers/Single/PA/Obl/2 Views", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Hip Joint/Single Ap/Obl/2 Views", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Hip Joints/Both Ap/Obl/3 Views", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Humerus Both Ap/Obl/4 Views", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Humerus Single Ap/Obl/2 Views", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Hysterosalpingogram(Hsg) Disposable Catheter", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Hysterosalpingogram(Hsg) Sterilized", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Intravenous Urethrogram (Ivu)", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Knee/Single/Ap/Lat/2 Views", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Lower Leg/Both Ap/Lat/4 Views/Trauma", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Lower Leg/Single Ap/Lat/2 Views", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Lumbar Spine/Ap/Lat/2 Views", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Lumbo-Sacral Spine/Ap/Lat/2 Views", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Mammography Both Breast Diagnostic", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Mammography Both Breast Screening", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Mammography Both Breasts", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Mammography Single Breast", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Mastoids/Iam/Ear Ap/Obl/4 Views", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Micturating Retrograde Cystourethrogram", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Pelvis/Hip Joint/Single Ap/Obl/2 Views", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Pelvis/Hip Joint/Single Ap/Obl/3 Views", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Post Nasal Space/Pns/Ap/Lat/2 Views", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Sacral Spine/Sacrum/Ap/Obl 2 Views", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Scapula/Ap/Obl/2 Views", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Shoulder Single Ap/Lat Shoot Through/2 Views", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Shoulder/Both Ap/Obl/4 Views", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Shoulder/Single Ap/Obl/2 Views", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Sinuses Ap/Lat/4 Views", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Skeletal Survey Spine Only", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Skull Ap/Lat/2 Views", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Soft Tissue Neck/Ap/Lat/2 Views", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Temporal Bones/Tmj Ap/Obl/4 Views", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Temporal Bones/Tmj Ap/Obl/6 Views", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Thigh/Both Ap/3 Views/Trauma", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Thigh/Single Ap/Lat/2 Views", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Thoracic Spine/Ap/Lat/2 Views", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Thoraco-Lumbar Spine/Ap/Lat/2 Views", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Tibia/Fibula/Both Ap/Lat/4 Views/Trauma", "descr": "", "catid": 27, "source": 83},
+    {"name": "X-Ray Tibia/Fibula/Single Ap/Lat/2 Views", "descr": "", "catid": 27, "source": 83},
+])
+
+medications = np.array([
+    {"name": "Xylometazoline (Otrivin Adult) Drops 1 %", "descr": "", "catid": 35, "source": 83},
+    {"name": "Xylometazoline (Otrivin Child) Drops 0.1 %", "descr": "", "catid": 35, "source": 83},
+    {"name": "Xylometazoline (Xylo-Acino) Spray 0.05 %", "descr": "", "catid": 35, "source": 83},
+    {"name": "Xylometazoline (Xylo-Acino) Spray 0.1 %", "descr": "", "catid": 35, "source": 83},
+])
+
+# =============================================================================
+# SHEET SUMMARY — X
+# =============================================================================
+# Total records on this sheet : 70
+# Categories found            : diagnostic_imaging, medications
+# Unmapped categories         : None
+# Duplicates removed          : 1
+# =============================================================================

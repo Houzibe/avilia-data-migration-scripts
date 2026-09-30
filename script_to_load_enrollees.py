@@ -58,13 +58,13 @@ else:
 if login_user:
     print("\nLoging User")
     print("-"*50)
-    print(f"User:  {login_user[0][0]["SURNAME"]} {login_user[0][0]["OTHERNAMES"]}")
-    print(f"Last Login: {login_user[0][0]["LASTLOGIN"]}")
+    print(f"User:  {login_user[0][0]['SURNAME']} {login_user[0][0]['OTHERNAMES']}")
+    print(f"Last Login: {login_user[0][0]['LASTLOGIN']}")
     print("-"*50)
 
 #load dataset
 enrollee_f = pd.read_csv("datasets/avilia_enrollees_dataset.csv")
-print("\n Subscribers dataset is loaded...")
+#print("\n Subscribers dataset is loaded...")
 
 """ params = {
         
@@ -83,6 +83,9 @@ for i, row in enrollee_f.iterrows():
 
    if not pd.isna(row["Last_name"]):
        params["ln"] = row["Last_name"]
+
+   if not pd.isna(row["Email"]):
+        params["email"] = row["Email"]
 
    if not pd.isna(row["Marital_status"]):
        params["maritstatus"] = row["Marital_status"]

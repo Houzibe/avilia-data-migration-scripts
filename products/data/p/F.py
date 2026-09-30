@@ -1,0 +1,207 @@
+import numpy as np
+
+cancer_care = np.array([
+    {"name": "Free Psa", "descr": "", "catid": 42, "source": 83},
+])
+
+consultations = np.array([
+    {"name": "Family Medicine Physician (In-House)", "descr": "", "catid": 36, "source": 83},
+    {"name": "Fit To Fly Report (Takes 5 Working Days)", "descr": "", "catid": 36, "source": 83},
+    {"name": "Follow Up Consultation Gp", "descr": "", "catid": 36, "source": 83},
+    {"name": "Follow Up Visits", "descr": "", "catid": 36, "source": 83},
+    {"name": "Foreign Visiting Consultants", "descr": "", "catid": 36, "source": 83},
+])
+
+dental_services = np.array([
+    {"name": "Full Denture", "descr": "", "catid": 50, "source": 83},
+])
+
+diagnostic_imaging = np.array([
+    {"name": "Femur (Ap+Lat)", "descr": "", "catid": 27, "source": 83},
+    {"name": "Fetal/ Obstetrics", "descr": "", "catid": 27, "source": 83},
+    {"name": "Follicular Tracking", "descr": "", "catid": 27, "source": 83},
+    {"name": "Foot (Ape & Oblique)", "descr": "", "catid": 27, "source": 83},
+])
+
+dialysis = np.array([
+    {"name": "Femoral Cannulation - Dual Lumen", "descr": "", "catid": 41, "source": 83},
+    {"name": "Femoral Cannulation - Single Lumen", "descr": "", "catid": 41, "source": 83},
+])
+
+laboratory_tests = np.array([
+    {"name": "Fallopian Tubes", "descr": "", "catid": 39, "source": 83},
+    {"name": "Fasting Blood Sugar (FBS)", "descr": "", "catid": 39, "source": 83},
+    {"name": "Fbc/Cbc", "descr": "", "catid": 39, "source": 83},
+    {"name": "Fbs + 2Hrs Pp", "descr": "", "catid": 39, "source": 83},
+    {"name": "Female Hormonal Profile", "descr": "", "catid": 39, "source": 83},
+    {"name": "Ferritin", "descr": "", "catid": 39, "source": 83},
+    {"name": "Fibrinogen", "descr": "", "catid": 39, "source": 83},
+    {"name": "Fibrinogen Level", "descr": "", "catid": 39, "source": 83},
+    {"name": "Fistulogram", "descr": "", "catid": 39, "source": 83},
+    {"name": "Fluid (Any Body Part): Microscopy, Culture & Sensitivity", "descr": "", "catid": 39, "source": 83},
+    {"name": "Fluid ADA", "descr": "", "catid": 39, "source": 83},
+    {"name": "Fluid LDH", "descr": "", "catid": 39, "source": 83},
+    {"name": "Fluorescent Treponemal Antibody Absorption Test (FTA Ab) IgG (Quantitative)", "descr": "", "catid": 39, "source": 83},
+    {"name": "Fluorescent Treponemal Antibody Absorption Test (FTA Ab) IgM (Quantitative)", "descr": "", "catid": 39, "source": 83},
+    {"name": "Folate", "descr": "", "catid": 39, "source": 83},
+    {"name": "Follicule Stimulating Hormone (FSH)", "descr": "", "catid": 39, "source": 83},
+    {"name": "Food Comprehensive Panel", "descr": "", "catid": 39, "source": 83},
+    {"name": "Foreskin/ Prepuce", "descr": "", "catid": 39, "source": 83},
+    {"name": "Free Cortisol", "descr": "", "catid": 39, "source": 83},
+    {"name": "Free PSA", "descr": "", "catid": 39, "source": 83},
+    {"name": "Free PSA/Total PSA Ratio", "descr": "", "catid": 39, "source": 83},
+    {"name": "Free T3", "descr": "", "catid": 39, "source": 83},
+    {"name": "Free T4", "descr": "", "catid": 39, "source": 83},
+    {"name": "Free Testosterone", "descr": "", "catid": 39, "source": 83},
+    {"name": "Fsh", "descr": "", "catid": 39, "source": 83},
+    {"name": "Full Blood Count", "descr": "", "catid": 39, "source": 83},
+    {"name": "Full Blood Count (Fbc): (Hb/Pcv, Wbc -Total And Differential, Platelet Count)", "descr": "", "catid": 39, "source": 83},
+    {"name": "Full Blood Count + Erythrocyte Sedimentation Rate", "descr": "", "catid": 39, "source": 83},
+    {"name": "Fungal Microscopy", "descr": "", "catid": 39, "source": 83},
+    {"name": "Fungi: Microscopy, Culture & Sensitivity", "descr": "", "catid": 39, "source": 83},
+    {"name": "Fungus M/C/S", "descr": "", "catid": 39, "source": 83},
+])
+
+medications = np.array([
+    {"name": "Fansidar", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fansidar 500/25Mg Per Tab", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fansidar Inj", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fansidar Inj 525Mg/Amp.", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fansidar Susp", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fansidar Suspension", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fansidar Tab 500Mg/25Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fansimef Tab", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fasigyn 500Mg Tab", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fasternet Sz 15", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fefol", "descr": "", "catid": 35, "source": 83},
+    {"name": "Feldene 20Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Feldene 20Mg Cap", "descr": "", "catid": 35, "source": 83},
+    {"name": "Feldene Gel", "descr": "", "catid": 35, "source": 83},
+    {"name": "Feldene Inj 20Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Feldene Injection 20Mg/Amp", "descr": "", "catid": 35, "source": 83},
+    {"name": "Felodipine 10Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Felodipine 5Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fenofibrate", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fergon 300Mg Tab", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fergon Tablet", "descr": "", "catid": 35, "source": 83},
+    {"name": "Ferobin Blood Tonic 200Ml", "descr": "", "catid": 35, "source": 83},
+    {"name": "Ferobin Plus Blood Tonic 200Ml", "descr": "", "catid": 35, "source": 83},
+    {"name": "Ferobin Plus Per Capsule", "descr": "", "catid": 35, "source": 83},
+    {"name": "Feroglobin", "descr": "", "catid": 35, "source": 83},
+    {"name": "Feroglobin Syrup", "descr": "", "catid": 35, "source": 83},
+    {"name": "Ferrous Sulphate 200Mg Tab", "descr": "", "catid": 35, "source": 83},
+    {"name": "Ferrous Sulphate/Fersolate", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fexofenadine", "descr": "", "catid": 35, "source": 83},
+    {"name": "Finasteride", "descr": "", "catid": 35, "source": 83},
+    {"name": "Finasteride 5Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Flagentyl 500Mg Tab", "descr": "", "catid": 35, "source": 83},
+    {"name": "Flemings Suspension 156Mg/5Ml", "descr": "", "catid": 35, "source": 83},
+    {"name": "Flixonase Nasal Spray", "descr": "", "catid": 35, "source": 83},
+    {"name": "Flixotide Accuhaler", "descr": "", "catid": 35, "source": 83},
+    {"name": "Flixotide Accuhaler 100Mcg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Flixotide Accuhaler 50Mcg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Floboid Eye Drops", "descr": "", "catid": 35, "source": 83},
+    {"name": "Flomax -Mr Capsules 400Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Flonase Nasal Spray", "descr": "", "catid": 35, "source": 83},
+    {"name": "Floranom Satchet", "descr": "", "catid": 35, "source": 83},
+    {"name": "Floranorm Oral Powder", "descr": "", "catid": 35, "source": 83},
+    {"name": "Floxapen 125Mg Susp", "descr": "", "catid": 35, "source": 83},
+    {"name": "Floxapen 250Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Floxapen Susp 125Mg/5Ml", "descr": "", "catid": 35, "source": 83},
+    {"name": "Flucamed 200Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Flucamed 50Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Flucamed Eye Drops", "descr": "", "catid": 35, "source": 83},
+    {"name": "Flucloxacillin Ampicillin 250Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fluconazole 150Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fluconazole 1V 2Mg In Sodium Chloride Inf", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fluconazole 50Mg (Celozole)", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fluconazole 50Mg (Flucamed)", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fluconazole Eye Drops", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fluconazole Oral Suspension", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fludrocortisone 0.1Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Flunitrazepam 1Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fluocinonide Cream 30G-Redeem", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fluorouracil-5 Inj 250Mg-India", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fluorouracil-5 Inj 500Mg-India", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fluoxetine 20Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fluoxetine 25Mg Inj  (Decanoate Or Enanthate)", "descr": "", "catid": 35, "source": 83},
+    {"name": "Flupentixol 20Mg Inj", "descr": "", "catid": 35, "source": 83},
+    {"name": "Flupentixol 3Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Flupentixol 40Mg Inj", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fluphenazine 25Mg Inj", "descr": "", "catid": 35, "source": 83},
+    {"name": "Flutamide Tablet - 250Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fluvastatin 20Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fluvastatin 40Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Foley Catheter", "descr": "", "catid": 35, "source": 83},
+    {"name": "Folic Acid 5Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Folic Acid 5Mg Syr", "descr": "", "catid": 35, "source": 83},
+    {"name": "Folic Acid 5Mg Tab", "descr": "", "catid": 35, "source": 83},
+    {"name": "Folic Acid Syrup", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fortum 1G Inj", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fortum 1G/Vial Inj", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fortwin 30Mg Inj", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fortwin Injection 30Mg/Amp", "descr": "", "catid": 35, "source": 83},
+    {"name": "Franol", "descr": "", "catid": 35, "source": 83},
+    {"name": "Franol Tab", "descr": "", "catid": 35, "source": 83},
+    {"name": "Frusemide 20Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Frusemide 20Mg Inj", "descr": "", "catid": 35, "source": 83},
+    {"name": "Frusemide 40Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Frusemide 40Mg Tab", "descr": "", "catid": 35, "source": 83},
+    {"name": "Frusemide Inj 20Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Funbact-A Cream", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fungisol Lotion", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fungisol Powder", "descr": "", "catid": 35, "source": 83},
+    {"name": "Fungisol Powder 20G", "descr": "", "catid": 35, "source": 83},
+    {"name": "Furoxetil Susp", "descr": "", "catid": 35, "source": 83},
+])
+
+others = np.array([
+    {"name": "Feeding Per Day", "descr": "", "catid": 48, "source": 83},
+    {"name": "Feeding Tube", "descr": "", "catid": 48, "source": 83},
+    {"name": "Feeding/day", "descr": "", "catid": 48, "source": 83},
+    {"name": "Female Catheterisation", "descr": "", "catid": 48, "source": 83},
+    {"name": "Four-Bedded Room", "descr": "", "catid": 48, "source": 83},
+    {"name": "FULL PACKAGE (covers all visits during antenatal period, prenatal vitamins, obstetrics ultrasound scan x 2, ANC classes)", "descr": "", "catid": 48, "source": 83},
+])
+
+surgeries = np.array([
+    {"name": "Family Replacement Donor", "descr": "", "catid": 37, "source": 83},
+    {"name": "Feeding /Day", "descr": "", "catid": 37, "source": 83},
+    {"name": "Feeding Gastrostomy", "descr": "", "catid": 37, "source": 83},
+    {"name": "Femoral Catheter Insertion (with the catheter", "descr": "", "catid": 37, "source": 83},
+    {"name": "Femoral Herniorrhaphy", "descr": "", "catid": 37, "source": 83},
+    {"name": "Femoral Tap", "descr": "", "catid": 37, "source": 83},
+    {"name": "Filling (Amalgam)", "descr": "", "catid": 37, "source": 83},
+    {"name": "Filling (Composite)", "descr": "", "catid": 37, "source": 83},
+    {"name": "Filling (Glass Ionomer) (Gic)", "descr": "", "catid": 37, "source": 83},
+    {"name": "Filling (M O Amalgam)", "descr": "", "catid": 37, "source": 83},
+    {"name": "Filling (Mod Amalgam)", "descr": "", "catid": 37, "source": 83},
+    {"name": "Filling (Temporary)", "descr": "", "catid": 37, "source": 83},
+    {"name": "Fistulecctomy", "descr": "", "catid": 37, "source": 83},
+    {"name": "Fistulectomy", "descr": "", "catid": 37, "source": 83},
+    {"name": "Fistulotomy", "descr": "", "catid": 37, "source": 83},
+    {"name": "Folley S Catheter", "descr": "", "catid": 37, "source": 83},
+    {"name": "Fore Arm Cast", "descr": "", "catid": 37, "source": 83},
+    {"name": "Foreign Body Removal", "descr": "", "catid": 37, "source": 83},
+    {"name": "Foreign body removal - Ear/eye/nose/throat", "descr": "", "catid": 37, "source": 83},
+    {"name": "Foreign Body Removal From The Ear Nose And Throat", "descr": "", "catid": 37, "source": 83},
+    {"name": "Fracture Orif: Pelvis", "descr": "", "catid": 37, "source": 83},
+    {"name": "Fracture Orif: Spine, Or Dislocation", "descr": "", "catid": 37, "source": 83},
+    {"name": "Fractures Orif: Femur, Neck Or Shaft", "descr": "", "catid": 37, "source": 83},
+    {"name": "Frenectomy", "descr": "", "catid": 37, "source": 83},
+    {"name": "Full Arm Cast", "descr": "", "catid": 37, "source": 83},
+    {"name": "Full Leg Cast", "descr": "", "catid": 37, "source": 83},
+])
+
+vaccines = np.array([
+    {"name": "Flu Vaccine@6Months Then Every Year", "descr": "", "catid": 46, "source": 83},
+])
+
+# =============================================================================
+# SHEET SUMMARY — F
+# =============================================================================
+# Total records on this sheet : 167
+# Categories found            : cancer_care, consultations, dental_services, diagnostic_imaging, dialysis, laboratory_tests, medications, others, surgeries, vaccines
+# Duplicates removed          : 4
+# Unmapped categories         : None
+# =============================================================================

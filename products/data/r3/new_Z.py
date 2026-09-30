@@ -1,0 +1,108 @@
+import numpy as np
+
+
+medications = np.array([
+    {"name": "Zaditen 1mg Tabs X30", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zaditen 2mg Tabs X30", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zaditen Eye Drop UK", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zaditen Suspension", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zaditen Syrup", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zaditen Syrup 100Ml", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zaditen(Ketotifen) Suspension Susp", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zaditen[Ketotifen]Tab 1Mg Tabs", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zafirlukast 20Mg Tab", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zantac [Ranitidine] Tabs", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zantac Inj[Ranitidine] Inj", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zedex Cough Syrup", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zeegap Pregabalin 75Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zeffix 100Mg Tab", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zentel Albendazole 200Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zentel Susp 400Mg/20Ml", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zentel Suspension 20ml", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zentel Tabs", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zestoretic 20Mg (Lisinopril+Hct Tabs", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zestoretic Tab", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zestril 10Mg Tab", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zestril 10Mg(Lisinopril) Tabs", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zestril 20Mg Tab", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zestril 5Mg Tab", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zestril 5Mg Tabs", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zetgel 35Mg Emulgel (Fidson)", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zetgel Cream", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zetro 500mg Caps (Azithromycin) X3", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zetro Suspension 15ml(Azithromycin)", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zidovudine Syrup", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zidovudine Tab", "descr": "", "catid": 35, "source": 83},
+    {"name": "Ziel Rifampicin 300Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zinacef 750Mg Inj", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zinc Chloride Plus Zinc Sulphate Solution 1% Zncl + 2% Zn2 So4", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zinc Oxide Ointment", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zinc Sulphate 20Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zinc Tab 10Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zinnat 125Mg Per 5Ml Susp", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zinnat 250Mg Tab", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zinnat 250mg Tabs", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zinnat 250Mg(Cefuroxime) Tabs", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zinnat 500mg Tabs", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zinnat Injection X1Vial", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zinnat Suspension 100Ml(Cefuroxime) Susp", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zinnat Suspension 125mg 100ml", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zinnat Suspension 125mg 50ml", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zinnat Suspension 50Ml Susp", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zinnat Tabs 500Mg(Cefuroxime) Tabs", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zinncaef Inj 750Mg (Branded) Cefuroxime Inj", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zithromax (Azithromycin) 250mg Capsule (Branded Agent)", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zithromax 200Mg 5Ml Susp", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zithromax 250Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zithromax 250mg Caps X6", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zithromax Azithromycin, 200mg/5ml Suspension (Branded Agent)", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zithromax Caps X24", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zithromax Suspension 125mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zithromax Tabs(Azithromycin) Tab", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zoladex Inj 10.8Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zoledronic Acid 4Mg5Ml (Zometa) Infusion (Novartis)", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zoloft 50Mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zopiclone 3.75mg Tabs X28", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zopiclone 7.5 mg Teva", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zopiclone 7.5mg", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zopiclone 7.5Mg (Zopice) Tablet", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zopiclone 7.5mg Tab", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zovirax Cream 10g", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zyloric 100Mg Tab", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zyloric 100mg Tabs", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zyloric 300Mg Tab", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zyloric 300mg Tabs", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zyncet 10mg Tabs X50", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zyncet Cetirizine 10Mg Tabs", "descr": "", "catid": 35, "source": 83},
+    {"name": "Zyncet Syrup 60ml", "descr": "", "catid": 35, "source": 83},
+])
+
+nutritionals = np.array([
+    {"name": "Zinc (20mg Tab.)", "descr": "", "catid": 33, "source": 83},
+    {"name": "Zinc 20Mg Paediatric (Emzor) Tablets X100", "descr": "", "catid": 33, "source": 83},
+    {"name": "Zinc 20Mg Tabs", "descr": "", "catid": 33, "source": 83},
+    {"name": "Zinc 50Mg Tablets (Natures Field ) Supplement", "descr": "", "catid": 33, "source": 83},
+    {"name": "Zinc 50Mg Tablets (Zolon)", "descr": "", "catid": 33, "source": 83},
+    {"name": "Zinc Tab  10Mg", "descr": "", "catid": 33, "source": 83},
+    {"name": "Zinc Tab 100Mg", "descr": "", "catid": 33, "source": 83},
+    {"name": "Zinc Tablets 20Mg (Emzor)", "descr": "", "catid": 33, "source": 83},
+    {"name": "Zinc Tabs 50Mg", "descr": "", "catid": 33, "source": 83},
+    {"name": "Zinc Vitamin D Vitamin C Effervescence Immune System Booster (Super Immune C) X20", "descr": "", "catid": 33, "source": 83},
+])
+
+surgeries = np.array([
+    {"name": "Zadek Procedure", "descr": "", "catid": 37, "source": 83},
+    {"name": "Zirconium Crown", "descr": "", "catid": 37, "source": 83},
+    {"name": "Zirconium Inlay", "descr": "", "catid": 37, "source": 83},
+    {"name": "Zirconium Over Implant", "descr": "", "catid": 37, "source": 83},
+    {"name": "Zygomatic Fractures - Closed Reduction", "descr": "", "catid": 37, "source": 83},
+])
+
+
+# =============================================================================
+# SHEET SUMMARY — Product Z
+# =============================================================================
+# Total records on this sheet : 88
+# Categories found            : medications, nutritionals, surgeries
+# Unmapped categories         : None
+# =============================================================================
